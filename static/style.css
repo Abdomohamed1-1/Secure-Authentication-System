@@ -1,0 +1,102 @@
+/* تنسيق عام للجسم */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* الحاوية الرئيسية (الكارت) */
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* تنسيق حقول الإدخال */
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* يضمن أن الحجم لا يتغير مع الـ padding */
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* تنسيق الأزرار */
+button {
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* تنسيق صورة الـ QR Code */
+.qr-img {
+    margin: 20px 0;
+    border: 3px solid #f4f4f4;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+}
+
+/* تنبيهات الخطأ */
+.error {
+    color: #e74c3c;
+    background: #fadbd8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* روابط أسفل الصفحة */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* علامة الصلاحية (Role Badge) */
+.badge {
+    background: #27ae60;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}

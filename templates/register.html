@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>إنشاء حساب جديد</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2><i class="fas fa-user-plus"></i> إنشاء حساب جديد</h2>
+        <form method="POST" action="/auth/signup">
+            <input type="text" name="username" placeholder="اسم المستخدم" required>
+            <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+            <input type="password" name="password" placeholder="كلمة المرور" required>
+            
+            <label style="display:block; margin-top:10px; text-align:right;">نوع الصلاحية:</label>
+            <select name="role">
+                <option value="User">مستخدم (User)</option>
+                <option value="Manager">مدير (Manager)</option>
+                <option value="Admin">مسؤول (Admin)</option>
+            </select>
+            
+            <button type="submit">تسجيل الحساب</button>
+        </form>
+        <div class="footer-links">
+            <a href="/auth/login">لديك حساب بالفعل؟ سجل دخولك</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تأمين الحساب</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2><i class="fas fa-shield-alt"></i> إعداد الأمان (2FA)</h2>
+        <p>قم بمسح الكود عبر تطبيق <strong>Microsoft Authenticator</strong></p>
+        
+        <div class="qr-img-wrapper">
+            <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code" class="qr-img" width="200">
+        </div>
+
+        <p style="font-size: 0.9em; color: #666;">
+            المفتاح اليدوي: <code style="background: #eee; padding: 2px 5px;">{{ secret }}</code>
+        </p>
+
+        <form method="POST" action="/auth/verify-2fa">
+            <input type="hidden" name="username" value="{{ username }}">
+            <input type="text" name="code" placeholder="أدخل الـ 6 أرقام" maxlength="6" required style="text-align:center; font-size: 20px; letter-spacing: 5px;">
+            <button type="submit">تفعيل ودخول</button>
+        </form>
+    </div>
+</body>
+</html>
